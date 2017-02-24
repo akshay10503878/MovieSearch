@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *searchResultTAbleView;
 @property (strong, nonatomic) IBOutlet UITextField *searchText;
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (strong, nonatomic) IBOutlet UIImageView *activityIndicatorImage;
 
 @end
 

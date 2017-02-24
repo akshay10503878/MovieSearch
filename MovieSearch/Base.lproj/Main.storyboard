@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dlv-eG-P7h" id="rVe-B7-S3M">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g77-aX-qZo">
@@ -108,13 +108,13 @@
                                     <action selector="SearchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eQ5-ay-gFC"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9PY-jB-6ux">
-                                <rect key="frame" x="162.5" y="308" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading.png" translatesAutoresizingMaskIntoConstraints="NO" id="gVY-si-DRP">
+                                <rect key="frame" x="137.5" y="283" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Ess-WJ-Hwv"/>
-                                    <constraint firstAttribute="width" constant="50" id="yAm-0Q-maA"/>
+                                    <constraint firstAttribute="height" constant="100" id="AAf-cV-ZtS"/>
+                                    <constraint firstAttribute="width" constant="100" id="BF8-BP-zN5"/>
                                 </constraints>
-                            </activityIndicatorView>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -125,17 +125,17 @@
                             <constraint firstItem="Aoy-HQ-Pli" firstAttribute="top" secondItem="je6-LX-Sep" secondAttribute="bottom" constant="10" id="EYB-KY-uF3"/>
                             <constraint firstItem="sg3-zi-i66" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="NRJ-TV-nip"/>
                             <constraint firstItem="wL3-Ge-Iga" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="b2g-GT-gOf"/>
-                            <constraint firstItem="9PY-jB-6ux" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ce0-0h-4bC"/>
                             <constraint firstItem="sg3-zi-i66" firstAttribute="top" secondItem="wL3-Ge-Iga" secondAttribute="bottom" constant="10" id="p43-Xe-oK2"/>
+                            <constraint firstItem="gVY-si-DRP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="p4o-CM-tQB"/>
+                            <constraint firstItem="gVY-si-DRP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qrf-wU-SNK"/>
                             <constraint firstItem="wL3-Ge-Iga" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rpT-5f-6UJ"/>
                             <constraint firstItem="Aoy-HQ-Pli" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="txR-H7-Qxk"/>
                             <constraint firstAttribute="trailing" secondItem="wL3-Ge-Iga" secondAttribute="trailing" id="tzZ-aZ-wL0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Aoy-HQ-Pli" secondAttribute="bottom" id="uuJ-dD-JaM"/>
-                            <constraint firstItem="9PY-jB-6ux" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xPY-0O-ftD"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="9PY-jB-6ux" id="9Wh-Im-GcH"/>
+                        <outlet property="activityIndicatorImage" destination="gVY-si-DRP" id="JFq-1n-Iyl"/>
                         <outlet property="searchResultTAbleView" destination="Aoy-HQ-Pli" id="npu-Et-56X"/>
                         <outlet property="searchText" destination="sg3-zi-i66" id="LrK-jL-JbL"/>
                     </connections>
@@ -253,6 +253,7 @@
     </scenes>
     <resources>
         <image name="back.png" width="512" height="512"/>
+        <image name="loading.png" width="512" height="512"/>
         <image name="movie_search3.png" width="512" height="512"/>
     </resources>
 </document>

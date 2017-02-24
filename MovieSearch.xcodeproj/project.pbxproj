@@ -26,6 +26,7 @@
 		3000A5271E60CDEA00086887 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3000A5261E60CDEA00086887 /* ImageIO.framework */; };
 		3033DC0C1E60D42000FBAE73 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3033DC0B1E60D42000FBAE73 /* MovieDetailViewController.m */; };
 		3033DC0E1E60DBD000FBAE73 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 3033DC0D1E60DBD000FBAE73 /* back.png */; };
+		30682A011E60E635003162A1 /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 30682A001E60E635003162A1 /* loading.png */; };
 		A39479341CDD448A03A66CE9 /* libPods-MovieSearchTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAD00A2F6A88CF0DAEF302C /* libPods-MovieSearchTests.a */; };
 		AA672CDC77453D538414B0F9 /* libPods-MovieSearchUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B13A2840629A2EF4237CF59E /* libPods-MovieSearchUITests.a */; };
 		DB93BEB387ADC5FDBE44F202 /* libPods-MovieSearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 242FBAE797E1F59DB2CCA211 /* libPods-MovieSearch.a */; };
@@ -84,6 +85,7 @@
 		3033DC0A1E60D42000FBAE73 /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailViewController.h; sourceTree = "<group>"; };
 		3033DC0B1E60D42000FBAE73 /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailViewController.m; sourceTree = "<group>"; };
 		3033DC0D1E60DBD000FBAE73 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		30682A001E60E635003162A1 /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
 		398C2A6CC73A8D8EA22CC93E /* Pods-MovieSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieSearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieSearchTests/Pods-MovieSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		5358E73D276AAB3EB72E45A5 /* Pods-MovieSearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieSearchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MovieSearchUITests/Pods-MovieSearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4C86BD960C1980B814682EC /* Pods-MovieSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieSearch/Pods-MovieSearch.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		3000A4DA1E60663600086887 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				30682A001E60E635003162A1 /* loading.png */,
 				3033DC131E60DF9E00FBAE73 /* images */,
 				3000A4DB1E60663600086887 /* main.m */,
 			);
@@ -382,6 +385,7 @@
 				3000A4EA1E60663600086887 /* Assets.xcassets in Resources */,
 				3000A51C1E60C46500086887 /* movie_search1.png in Resources */,
 				3033DC0E1E60DBD000FBAE73 /* back.png in Resources */,
+				30682A011E60E635003162A1 /* loading.png in Resources */,
 				3000A51E1E60C46500086887 /* movie_search3.png in Resources */,
 				3000A5221E60CC1D00086887 /* No_Image.png in Resources */,
 				3000A4E51E60663600086887 /* Main.storyboard in Resources */,

@@ -37,17 +37,28 @@
     sRdataDownloader=[SearchResultDownloader sharedInstance];
     sRdataDownloader.delegate=self;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(ShowError) name:@"Error" object:nil];
-    [self.activityIndicator setHidesWhenStopped:true];
-    [self.activityIndicator stopAnimating];
+    [self.activityIndicatorImage setHidden:true];
     
 
 
 }
 
+-(void)rotateLayerInfinite:(CALayer *)layer
+{
+    CABasicAnimation *rotation;
+    rotation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    rotation.fromValue = [NSNumber numberWithFloat:0];
+    rotation.toValue = [NSNumber numberWithFloat:(2 * M_PI)];
+    rotation.duration = 1.0f;
+    rotation.repeatCount = HUGE_VALF; 
+    [layer removeAllAnimations];
+    [layer addAnimation:rotation forKey:@"Spin"];
+}
+
 
 -(void)ShowError
 {
-    [self.activityIndicator stopAnimating];
+
     isNextPageAvailabe=false;
     pageno=1;
     loadingData=false;
@@ -166,7 +177,13 @@
     
     NSDictionary *result;
     if (![[searchResult allKeys] containsObject:@"Search"]) {
-        [self ShowError];
+        dispatch_async(dispatch_get_main_queue(),^{
+            [self ShowError];
+            [spinner stopAnimating];
+            [self.activityIndicatorImage setHidden:true];
+            [self.activityIndicatorImage.layer removeAllAnimations];
+            
+        });
         return;
     }
     result=[searchResult objectForKey:@"Search"];
@@ -194,7 +211,8 @@
                 [alert addAction:okButton];
                 [self presentViewController:alert animated:YES completion:nil];
                 [spinner stopAnimating];
-                [self.activityIndicator stopAnimating];
+                [self.activityIndicatorImage setHidden:true];
+                [self.activityIndicatorImage.layer removeAllAnimations];
             });
             
             return;
@@ -230,9 +248,10 @@
         
         [self.searchResultTAbleView endUpdates];
         
-        [self.activityIndicator stopAnimating];
         [spinner stopAnimating];
         loadingData = false;
+        [self.activityIndicatorImage setHidden:true];
+        [self.activityIndicatorImage.layer removeAllAnimations];
     });
 
 
@@ -242,7 +261,8 @@
     
     if ([self.searchText.text length]>2) {
         
-        [self.activityIndicator startAnimating];
+        [self.activityIndicatorImage setHidden:false];
+        [self rotateLayerInfinite:self.activityIndicatorImage.layer];
         isNextPageAvailabe=false;
         pageno=1;
         loadingData=false;
